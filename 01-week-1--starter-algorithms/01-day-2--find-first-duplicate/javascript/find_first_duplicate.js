@@ -15,7 +15,7 @@ function findFirstDuplicate(arr) {
 
     // SET object lets you store unique values of any type. 
 
-    let elementSet = new Set();
+    let valueSet = new Set();
 
     // loop through the given array
     for (let i = 0; i < arr.length; i++) {
@@ -25,8 +25,8 @@ function findFirstDuplicate(arr) {
         // statement 3 increases a value (i++) each time a code block in the loop has been executed.
 
         // add an 'else' statement for if the element isn't in our Set yet, in which case we add it to the Set and move on.
-        if (elementSet.has(arr[i])) return arr[i];
-        elementSet.add(arr[i]);
+        if (valueSet.has(arr[i])) return arr[i];
+        valueSet.add(arr[i]);
         // check to see if the Set already contains the element that we're currently on in our loop.
     }
     return -1;
